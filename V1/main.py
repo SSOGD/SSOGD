@@ -33,7 +33,7 @@ parser.add_argument('--loss_file', type=str, default='tt_right_loss_7680_6fold_a
 
 args = parser.parse_args()
 
-# 定义数据集
+
 class GraphDataset(Dataset):
     def __init__(self, labels_train, features_train, matrix_0utlier_ratios_train, matrix_adj_eigenValues_train,
                            matrix_adj_train, matrix_adj_eigenVectors_train, matrix_average_distances_train, matrix_neighbors_train):
@@ -142,7 +142,7 @@ def main_SSOGD(args, subject, session):
     # accuracy_val_list = []
     accuracy_test_list = []
 
-    # 训练循环
+
     num_epochs = args.num_epochs
     for epoch in range(num_epochs):
         model.train()
